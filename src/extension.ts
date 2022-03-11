@@ -27,6 +27,8 @@ const upload = (
     vscode.window.showErrorMessage("missing remoteName param");
     return Promise.reject();
   }
+  console.log(JSON.stringify(config),"==============");
+  
   if (!config.bucket) {
     vscode.window.showErrorMessage("missing bucket param");
     return Promise.reject();
@@ -212,12 +214,12 @@ export function activate(context: vscode.ExtensionContext) {
   // This line of code will only be executed once when your extension is activated
   console.log('Congratulations, your extension "tencent-cloud-cos-upload-image" is now active!');
 
-  const config = vscode.workspace.getConfiguration("tencentCloudCOSUploader");
+  const config = vscode.workspace.getConfiguration("tencentCloudCOSUploaderNewer");
 
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  let pasteUpload = vscode.commands.registerCommand("extension.tencentCloudCOSUploader.paste", () => {
+  let pasteUpload = vscode.commands.registerCommand("extension.tencentCloudCOSUploaderNewer.paste", () => {
     // The code you place here will be executed every time your command is executed
 
     // Display a message box to the user
@@ -238,7 +240,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
     );
   });
-  let selectUpload = vscode.commands.registerCommand("extension.tencentCloudCOSUploader.select", () => {
+  let selectUpload = vscode.commands.registerCommand("extension.tencentCloudCOSUploaderNewer.select", () => {
     // The code you place here will be executed every time your command is executed
 
     vscode.window

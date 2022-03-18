@@ -20,6 +20,7 @@ VSCode 插件，支持直接在 Markdown 文件中 **粘贴截图** 和 **选择
 ![](https://cdn.gaogangsever.cn/images/94d9237835f5815716e5896ebf206a90.png)
 
 或者右键使用：
+
 ![](https://cdn.gaogangsever.cn/images/3e0928142b11a68f9a843f7221968be4.png)
 
 ## 参数配置
